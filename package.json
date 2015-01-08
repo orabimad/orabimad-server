@@ -1,7 +1,7 @@
 {
-  "name": "oramad-runner",
+  "name": "orabimad-server",
   "version": "1.0.1",
-  "description": "Oracle BI MAD Plugin Runner",
+  "description": "Oracle BI MAD Plugin Development Server",
   "main": "runner.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
