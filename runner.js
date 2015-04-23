@@ -43,6 +43,8 @@ function BIMADServer(pluginFile, sdkDir)
     '/plugin.js': this.servePlugin,
     '/pluginrunner.js': this.serveRunner,
     '/bimadcore.js': this.serveCore,
+    '/xdo_sdk.js': this.serveXDO,
+    '/en_US.js': this.serveLocale,
     '/css/jqm.theme.2.0.0.min.css': this.serveTheme,
     '/css/images/ajax-loader.gif': this.serveImage
   };
@@ -273,6 +275,25 @@ BIMADServer.prototype.serveCore = function(req, res, next)
 
   // just serves static js file
   var template = fs.readFileSync(__dirname + '/lib/bimadcore.js', 'utf8');
+  res.end(template);
+}
+
+BIMADServer.prototype.serveXDO = function (req, res) {
+  // set mime header
+  res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+
+  // just serves static js file
+  var template = fs.readFileSync(__dirname + '/lib/xdo_sdk.js', 'utf8');
+  res.end(template);
+}
+
+
+BIMADServer.prototype.serveLocale = function (req, res) {
+  // set mime header
+  res.setHeader('Content-Type', 'application/javascript; charset=UTF-8');
+
+  // just serves static js file
+  var template = fs.readFileSync(__dirname + '/lib/en_US.js', 'utf8');
   res.end(template);
 }
 
