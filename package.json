@@ -1,6 +1,6 @@
 {
   "name": "orabimad-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Oracle BI MAD Plugin Development Server",
   "main": "runner.js",
   "scripts": {
